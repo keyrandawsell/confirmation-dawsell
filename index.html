@@ -101,10 +101,15 @@ img{max-width:100%;display:block;border-radius:10px;}
   <h1>Merci d'avoir réservé ton<br><span>appel de scaling offert</span></h1>
   <p>Tu es à un appel de changer ton business. Prends 2 minutes pour confirmer ton RDV et consulte ce que j'ai préparé pour toi en attendant.</p>
 
-  <div style="max-width:560px;margin:0 auto 40px;">
-    <a href="https://youtu.be/6BfnwLNgN14" target="_blank" style="display:block;position:relative;border-radius:14px;overflow:hidden;">
-      <img src="https://img.youtube.com/vi/6BfnwLNgN14/maxresdefault.jpg" 
-           alt="Message de Keyran" 
+  <div style="max-width:560px;margin:0 auto 40px;" id="video-thumb">
+    <div style="position:relative;border-radius:14px;overflow:hidden;cursor:pointer;" onclick="
+      document.getElementById('video-thumb').innerHTML = 
+      '<div style=\'position:relative;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;\'>' +
+      '<iframe src=\'https://www.youtube.com/embed/6BfnwLNgN14?autoplay=1&rel=0\' allowfullscreen allow=\'autoplay\' ' +
+      'style=\'position:absolute;top:0;left:0;width:100%;height:100%;border:0;\'></iframe></div>';
+    ">
+      <img src="https://img.youtube.com/vi/6BfnwLNgN14/maxresdefault.jpg"
+           alt="Message de Keyran"
            style="width:100%;display:block;border-radius:14px;">
       <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
                   width:68px;height:48px;background:#FF0000;border-radius:10px;
@@ -113,7 +118,7 @@ img{max-width:100%;display:block;border-radius:10px;}
                     border-bottom:12px solid transparent;
                     border-left:20px solid white;margin-left:4px;"></div>
       </div>
-    </a>
+    </div>
   </div>
 </div>
 
